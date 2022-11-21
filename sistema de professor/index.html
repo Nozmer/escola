@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600&family=Rubik:wght@400;500;600&display=swap');
+        body {
+            margin-top: 40px;
+        }
+        
+        #box-registra {
+            display: grid;
+            grid-template-columns: auto;
+            row-gap: 15px;
+            column-gap: 10px;
+            border: rgb(163, 163, 163) solid 1px;
+            background-color: rgb(224, 224, 224);
+            width: 200px;
+            height: fit-content;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+        #show-table {
+            border-radius: 5px 5px 0px 0px;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            width: 500px;
+            height: fit-content;
+        }
+        
+        .conteiner {
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: auto auto;
+            row-gap: 20px;
+            column-gap: 20px;
+            width: fit-content;
+            height: fit-content;
+        }
+        
+        .delete {
+            color: white;
+            background-color: red;
+            border: rgb(163, 163, 163) solid 1px;
+            border-radius: 5px;
+            margin-left: 5px;
+            padding: 3px 10px 3px 10px;
+            width: fit-content;
+            height: fit-content;
+        }
+        
+        #td,
+        #tr {
+            text-align: center;
+            padding: 6px;
+        }
+        
+        #tr {
+            border: rgb(163, 163, 163) solid 1px;
+            background-color: rgb(224, 224, 224);
+        }
+        
+        #td {
+            border: rgb(110, 110, 110) solid 1px;
+            background-color: rgb(45, 164, 78);
+            font-weight: 500;
+            color: white;
+        }
+        
+        h1 {
+            font-family: "Rubik";
+            font-weight: 600;
+            font-size: 24px;
+            text-align: center;
+        }
+        
+        p,
+        input {
+            margin: 0;
+            font-family: "Rubik";
+            font-size: 14px;
+            color: black;
+        }
+        
+        input,
+        select {
+            background-color: transparent;
+            background-color: white;
+            padding: 3px;
+            font-size: 12px;
+            padding-left: 7px;
+            border: rgb(126, 126, 126) solid 1px;
+            border-radius: 3px;
+        }
+        
+        #submit {
+            cursor: pointer;
+            border: rgb(110, 110, 110) solid 1px;
+            background-color: rgb(45, 164, 78);
+            color: white;
+        }
+        
+        #text {
+            height: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="conteiner">
+        <form action="conexao.php" method="post">
+            <div id="box-registra">
+                <p>Digite seu nome</p>
+                <input type="text" name="nome">
+                <p>Escolha sua escola</p>
+                <select name="select">
+                    <option value="valor1">Funec Riacho</option>
+                    <option value="valor2">Funec Inconfidentes</option>
+                    <option value="valor3">CETEC</option>
+                </select>
+                <p>Digite sua senha</p>
+                <input type="password" name="senha">
+                <input type="submit" id="submit">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
